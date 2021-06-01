@@ -6,17 +6,30 @@
 #    By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/16 13:44:42 by asaadi            #+#    #+#              #
-#    Updated: 2021/05/31 20:18:06 by asaadi           ###   ########.fr        #
+#    Updated: 2021/06/01 17:50:06 by asaadi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = PhoneConatacts
+NAME = MyPhoneBook
 
 FLAGS = -Wall -Wextra -Werror
 
-SRCS =	main.cpp
+SRC_PATH = srcs
 
-OBJS = $(SRCS:.cpp=.o)
+SRC_NAME = 	main.cpp \
+			contact.cpp \
+			my_phonebook.cpp
+
+HDR_PATH = headers/
+HDR_INC = -I ./headers
+HDR_NAME = my_phonebook.hpp contact.hpp
+
+OBJ_PATH= objs
+OBJ_NAME = $(SRC_NAME:.cpp=.o)
+
+OBJS= $(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
+SRCS= $(addprefix $(SRC_PATH)/,$(SRC_NAME))
+HDRS= $(addprefix $(HDR_PATH)/,$(HDR_NAME))
 
 all: $(NAME)
 
@@ -26,14 +39,16 @@ $(NAME): $(OBJS)
 	@echo "			The binary file has been created!\n"
 	@echo "\033[0m"
 
-%.o	: %.cpp 
+$(OBJ_PATH)/%.o: $(SRC_PATH)/%.cpp $(HDRS)
+	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@echo "\033[0;33m"
-	g++ $(FLAGS) -c $< -o $@
+	g++ $(FLAGS) $(HDR_INC) -c $< -o $@
 	@echo "\033[0m"
 
 
 clean:
 	@rm -rf $(OBJS)
+	@rmdir $(OBJ_PATH) 2> /dev/null || true
 	@echo "\033[0;31m"
 	@echo "			The objects files has been removed!\n"
 	@echo "\033[0m"
