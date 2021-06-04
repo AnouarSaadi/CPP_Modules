@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 14:54:07 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/01 15:54:57 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/04 15:06:33 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 # define CONTACT_HPP
 
 # include <string>
-
 # include <iostream>
+# include <iomanip>
+# include <cstdlib>
+# include <cwctype>
 
 class Contact
 {
