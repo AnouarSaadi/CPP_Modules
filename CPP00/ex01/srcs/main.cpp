@@ -6,13 +6,13 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 11:20:53 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/04 15:40:02 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/04 18:12:11 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "my_phonebook.hpp"
+#include "phonebook.class.hpp"
 
-void	enterCommmand()
+void	enterCommand()
 {
 	std::cout << std::endl;
 	std::cout << "*********************************************" << std::endl;
@@ -27,21 +27,21 @@ void	enterCommmand()
 
 int main()
 {
+	Phonebook dt;
 	std::string str;
-	MyPhonebook dt;
 
 	while (true)
 	{
-		enterCommmand();
+		enterCommand();
 		std::getline(std::cin, str);
-		if (str == "ADD" || str == "add")
+		if (!std::strcmp(str.c_str(), "ADD"))
 			dt.addNewContact();
-		else if (str == "SEARCH" || str == "search")
+		else if (!std::strcmp(str.c_str(), "SEARCH"))
 			dt.searchInContacts();
-		else if (str == "EXIT" || str == "exit")
+		else if (!std::strcmp(str.c_str(), "EXIT"))
 		{
 			std::cout << "Exit the program." << std::endl;
-			return (0);
+			return 0;
 		}
 		else
 			std::cout << "Error: Invalid command " << std::endl;

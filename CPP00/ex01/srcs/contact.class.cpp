@@ -1,125 +1,125 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.cpp                                        :+:      :+:    :+:   */
+/*   contact.class.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 11:44:30 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/01 15:54:40 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/04 17:58:01 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "contact.class.hpp"
 
 std::string Contact::getFirstName()
 {
-	return this->firstName;
+	return this->_firstName;
 }
 
 void Contact::setFirstName(std::string arg)
 {
-	this->firstName = arg;
+	this->_firstName = arg;
 }
 
 std::string Contact::getLastName()
 {
-	return this->lastName;
+	return this->_lastName;
 }
 
 void Contact::setLastName(std::string arg)
 {
-	this->lastName = arg;
+	this->_lastName = arg;
 }
 
 std::string Contact::getNickname()
 {
-	return this->nickname;
+	return this->_nickname;
 }
 
 void Contact::setNickname(std::string arg)
 {
-	this->nickname = arg;
+	this->_nickname = arg;
 }
 
 std::string Contact::getLogin()
 {
-	return this->login;
+	return this->_login;
 }
 
 void Contact::setLogin(std::string arg)
 {
-	this->login = arg;
+	this->_login = arg;
 }
 
 std::string Contact::getPostalAddress()
 {
-	return this->postalAddress;
+	return this->_postalAddress;
 }
 
 void Contact::setPostalAddress(std::string arg)
 {
-	this->postalAddress = arg;
+	this->_postalAddress = arg;
 }
 
 std::string Contact::getEmailAddress()
 {
-	return this->emailAddress;
+	return this->_emailAddress;
 }
 
 void Contact::setEmailAddress(std::string arg)
 {
-	this->emailAddress = arg;
+	this->_emailAddress = arg;
 }
 
 std::string Contact::getPhoneNumber()
 {
-	return this->phoneNumber;
+	return this->_phoneNumber;
 }
 
 void Contact::setPhoneNumber(std::string arg)
 {
-	this->phoneNumber = arg;
+	this->_phoneNumber = arg;
 }
 
 std::string Contact::getBirthdayDate()
 {
-	return this->birthdayDate;
+	return this->_birthdayDate;
 }
 
 void Contact::setBirthdayDate(std::string arg)
 {
-	this->birthdayDate = arg;
+	this->_birthdayDate = arg;
 }
 
 std::string Contact::getFavoriteMeal()
 {
-	return this->favoriteMeal;
+	return this->_favoriteMeal;
 }
 
 void Contact::setFavoriteMeal(std::string arg)
 {
-	this->favoriteMeal = arg;
+	this->_favoriteMeal = arg;
 }
 
 std::string Contact::getUnderwearColor()
 {
-	return this->underwearColor;
+	return this->_underwearColor;
 }
 
 void Contact::setUnderwearColor(std::string arg)
 {
-	this->underwearColor = arg;
+	this->_underwearColor = arg;
 }
 
 std::string Contact::getDarkestSecret()
 {
-	return this->darkestSecret;
+	return this->_darkestSecret;
 }
 
 void Contact::setDarkestSecret(std::string arg)
 {
-	this->darkestSecret = arg;
+	this->_darkestSecret = arg;
 }
 
 void	Contact::printContactInfos()

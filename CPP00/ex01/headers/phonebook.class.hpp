@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   phonebook.class.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/30 13:11:42 by asaadi            #+#    #+#             */
-/*   Updated: 2021/05/30 16:32:47 by asaadi           ###   ########.fr       */
+/*   Created: 2021/05/31 14:54:07 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/04 18:12:00 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef PHONEBOOK_CLASS_HPP
+# define PHONEBOOK_CLASS_HPP
 
-int main()
+# include "contact.class.hpp"
+
+class Phonebook
 {
-	std :: cout << std::endl;
-	return (0);
-}
+private:
+	Contact _contacts[8];
+	int		_index;
+public:
+	void	addNewContact();
+	void	searchInContacts();
+	void	printContacts(int i);
+	Phonebook();
+};
+
+
+#endif

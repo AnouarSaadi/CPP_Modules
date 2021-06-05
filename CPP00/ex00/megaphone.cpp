@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/30 15:51:51 by asaadi            #+#    #+#             */
-/*   Updated: 2021/05/30 16:29:20 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/04 16:24:06 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,13 @@
 
 int main(int ac, char **av)
 {
-	int i;
-	int j;
-
 	if (ac > 1)
 	{
-		i = 0;
+		int i(0);
 		while (av[++i])
 		{
-			j = -1;
-			while (av[i][++j])
-				if (av[i][j] >= 'a' && av[i][j] <= 'z')
+			for (int j = 0; av[i][j]; j++)
+				if (std::islower(av[i][j]))
 					av[i][j] = av[i][j] - 32;
 			std::cout << av[i];
 		}

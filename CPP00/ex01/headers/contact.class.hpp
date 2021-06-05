@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   contact.class.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 14:54:07 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/04 15:06:33 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/04 17:56:51 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#ifndef CONTACT_CLASS_HPP
+# define CONTACT_CLASS_HPP
 
 # include <string>
 # include <iostream>
@@ -22,17 +22,17 @@
 class Contact
 {
 private:
-	std::string	firstName;
-	std::string	lastName;
-	std::string	nickname;
-	std::string	login;
-	std::string	postalAddress;
-	std::string	emailAddress;
-	std::string	phoneNumber;
-	std::string	birthdayDate;
-	std::string	favoriteMeal;
-	std::string	underwearColor;
-	std::string	darkestSecret;
+	std::string	_firstName;
+	std::string	_lastName;
+	std::string	_nickname;
+	std::string	_login;
+	std::string	_postalAddress;
+	std::string	_emailAddress;
+	std::string	_phoneNumber;
+	std::string	_birthdayDate;
+	std::string	_favoriteMeal;
+	std::string	_underwearColor;
+	std::string	_darkestSecret;
 public:	
 	std::string getFirstName();
 	void setFirstName(std::string arg);

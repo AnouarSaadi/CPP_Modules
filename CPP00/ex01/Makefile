@@ -6,7 +6,7 @@
 #    By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/16 13:44:42 by asaadi            #+#    #+#              #
-#    Updated: 2021/06/01 17:50:06 by asaadi           ###   ########.fr        #
+#    Updated: 2021/06/04 16:29:22 by asaadi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,12 +17,12 @@ FLAGS = -Wall -Wextra -Werror
 SRC_PATH = srcs
 
 SRC_NAME = 	main.cpp \
-			contact.cpp \
-			my_phonebook.cpp
+			contact.class.cpp \
+			phonebook.class.cpp
 
 HDR_PATH = headers/
 HDR_INC = -I ./headers
-HDR_NAME = my_phonebook.hpp contact.hpp
+HDR_NAME = phonebook.class.hpp contact.class.hpp
 
 OBJ_PATH= objs
 OBJ_NAME = $(SRC_NAME:.cpp=.o)
@@ -34,7 +34,7 @@ HDRS= $(addprefix $(HDR_PATH)/,$(HDR_NAME))
 all: $(NAME)
 
 $(NAME): $(OBJS) 
-	@g++ $(FLAGS) $(OBJS) -o $(NAME)
+	@clang++ $(FLAGS) $(OBJS) -o $(NAME)
 	@echo "\033[1;33m"
 	@echo "			The binary file has been created!\n"
 	@echo "\033[0m"
@@ -42,7 +42,7 @@ $(NAME): $(OBJS)
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.cpp $(HDRS)
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@echo "\033[0;33m"
-	g++ $(FLAGS) $(HDR_INC) -c $< -o $@
+	clang++ $(FLAGS) $(HDR_INC) -c $< -o $@
 	@echo "\033[0m"
 
 
