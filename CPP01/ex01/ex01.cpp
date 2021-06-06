@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.cpp                                           :+:      :+:    :+:   */
+/*   ex01.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/05 14:38:15 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/06 12:25:14 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/06 13:00:13 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/06 14:02:33 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.hpp"
+#include <iostream>
 
-Pony::Pony(std::string& arg): _name(arg)
+void	memoryLeak()
 {
-}
-
-Pony::~Pony()
-{
-}
-
-std::string Pony::getNamePony()
-{
-	return this->_name;
+	std::string* panther = new std::string("String panther");
+	std::cout << *panther << std::endl;
+	delete panther;
 }

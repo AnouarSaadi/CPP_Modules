@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/05 14:38:15 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/06 12:25:14 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/06 14:15:23 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/06 14:16:03 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.hpp"
+#include "Zombie.hpp"
 
-Pony::Pony(std::string& arg): _name(arg)
+Zombie::Zombie(/* args */)
 {
 }
 
-Pony::~Pony()
+Zombie::~Zombie()
 {
 }
 
-std::string Pony::getNamePony()
+void Zombie::announce()
 {
-	return this->_name;
+	//<name (type)> Braiiiiiiinnnssss...
 }
+
+
