@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/06 14:58:45 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/10 11:39:32 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/08 16:11:59 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/10 14:48:45 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEEVENT_HPP
-# define ZOMBIEEVENT_HPP
+#include "Brain.hpp"
 
-# include "Zombie.hpp"
-
-class ZombieEvent
+Brain::Brain()
 {
-private:
-	std::string _type;
-public:
-	ZombieEvent();
-	~ZombieEvent();
-	void	setZombieType(std::string _argType);
-	Zombie*	newZombie(std::string name);
-	void	randomChump();
-};
+}
 
-#endif
+Brain::~Brain()
+{
+}
+
+std::string Brain::identify() const
+{
+	std::string sRet;
+	std::stringstream getAdd;
+	getAdd << this;
+	getAdd >> sRet;
+	for (size_t i = 2; i < sRet.length(); i++)
+			sRet[i] = std::toupper(sRet[i]);
+	return sRet;
+}

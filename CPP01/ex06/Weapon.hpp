@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/06 14:58:45 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/10 11:39:32 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/09 14:24:29 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/09 15:20:56 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEEVENT_HPP
-# define ZOMBIEEVENT_HPP
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-# include "Zombie.hpp"
+# include <iostream>
 
-class ZombieEvent
+class Weapon
 {
 private:
 	std::string _type;
 public:
-	ZombieEvent();
-	~ZombieEvent();
-	void	setZombieType(std::string _argType);
-	Zombie*	newZombie(std::string name);
-	void	randomChump();
+	Weapon(std::string _argType);
+	~Weapon();
+	const std::string&	getType();
+	void				setType(const std::string& _argType);
 };
 
 #endif

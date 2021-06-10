@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/06 14:58:45 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/10 11:39:32 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/09 18:37:54 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/09 18:39:33 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEEVENT_HPP
-# define ZOMBIEEVENT_HPP
+#ifndef REPLACE_HPP
+# define REPLACE_HPP
 
-# include "Zombie.hpp"
+# include <iostream>
+# include <fstream>
+# include <string>
 
-class ZombieEvent
+class Replace
 {
 private:
-	std::string _type;
+	std::fstream _fileIn;
+	std::fstream _fileOut;
+	std::string _fileName;
+	std::string _s1;
+	std::string _s2;
 public:
-	ZombieEvent();
-	~ZombieEvent();
-	void	setZombieType(std::string _argType);
-	Zombie*	newZombie(std::string name);
-	void	randomChump();
+	Replace(/* args */);
+	~Replace();
+	bool replaceFunc();
+	bool parsArgs(int argc, char const *argv[]);
 };
 
 #endif

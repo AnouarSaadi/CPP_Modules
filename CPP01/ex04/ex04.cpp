@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/06 14:58:45 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/10 11:39:32 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/08 13:35:58 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/10 11:47:40 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEEVENT_HPP
-# define ZOMBIEEVENT_HPP
+#include <iostream>
 
-# include "Zombie.hpp"
-
-class ZombieEvent
+void pointerToStr(std::string* str)
 {
-private:
-	std::string _type;
-public:
-	ZombieEvent();
-	~ZombieEvent();
-	void	setZombieType(std::string _argType);
-	Zombie*	newZombie(std::string name);
-	void	randomChump();
-};
+	std::cout << "Pointer   : " << *str << std::endl;
+}
 
-#endif
+void referenceToStr(std::string& str)
+{
+	std::cout << "Reference : " << str << std::endl;
+}
+
+int main()
+{
+	std::string str("HI THIS IS BRAIN");
+	pointerToStr(&str);
+	referenceToStr(str);
+	return 0;
+}

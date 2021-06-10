@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 14:38:27 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/06 12:24:21 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/10 11:29:55 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@ class Pony
 {
 private:
 	std::string _name;
+	std::string _color;
 public:
-	std::string getNamePony();
-	
-	Pony(std::string& arg);
+	Pony(std::string, std::string );
 	~Pony();
+	std::string getNamePony();
+	std::string getColorPony();
 };
 
 #endif

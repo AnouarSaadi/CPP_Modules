@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/06 14:58:45 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/10 11:39:32 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/09 15:08:39 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/09 15:33:46 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEEVENT_HPP
-# define ZOMBIEEVENT_HPP
+#include "HumanB.hpp"
 
-# include "Zombie.hpp"
-
-class ZombieEvent
+HumanB::HumanB(std::string _argName) : _name(_argName)
 {
-private:
-	std::string _type;
-public:
-	ZombieEvent();
-	~ZombieEvent();
-	void	setZombieType(std::string _argType);
-	Zombie*	newZombie(std::string name);
-	void	randomChump();
-};
+}
 
-#endif
+HumanB::~HumanB()
+{
+}
+
+void HumanB::setWeapon(Weapon& _argWeapon)
+{
+	_weapon = &_argWeapon;
+}
+
+void HumanB::attack()
+{
+	std::cout << _name << " attacks with his " << _weapon->getType() << std::endl;
+}

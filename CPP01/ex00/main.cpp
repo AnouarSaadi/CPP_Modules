@@ -6,30 +6,32 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 14:37:49 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/06 13:02:56 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/10 14:26:54 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Pony.hpp"
 
-Pony* ponyOnTheHeap(std::string& arg)
+void ponyOnTheHeap(std::string argName, std::string argCol)
 {
-	return new Pony(arg);
+	Pony *pnHeap = new Pony(argName, argCol);
+	std::cout << "The " + pnHeap->getColorPony() << \
+		" Pony with name " << pnHeap->getNamePony() << " is in Heap." <<std::endl;
+	delete pnHeap;
 }
 
-Pony ponyOnTheStack(std::string& arg)
+void ponyOnTheStack(std::string argName, std::string argCol)
 {
-	return Pony(arg);
+	Pony pnStack =  Pony(argName, argCol);
+	std::cout << "The " + pnStack.getColorPony() << \
+		" Pony with name " << pnStack.getNamePony() << " is in Stack." << std::endl;
 }
 
 int main()
 {
 	std::string	sHeap("BOBI");
 	std::string	sStack("POPI");
-	Pony*	pnHeap = ponyOnTheHeap(sHeap);
-	Pony	pnStack = ponyOnTheStack(sStack);
-	std::cout << "Pony with name: " << pnHeap->getNamePony() << " is in Heap." <<std::endl;
-	std::cout << "Pony with name: " << pnStack.getNamePony() << " is in Stack." << std::endl;
-	delete pnHeap;
+	ponyOnTheHeap(sHeap, "BLACK");
+	ponyOnTheStack(sStack, "BROWN");
 	return 0;
 }
