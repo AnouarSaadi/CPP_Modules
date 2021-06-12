@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 11:33:18 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/10 11:45:03 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/12 11:29:33 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Zombie::Zombie()
 {
-	std::string ranNames[5] = {"ZombieA", "ZombieB", "ZombieC", "ZombieD", "ZombieE"};
+	std::string ranNames[5] = {"ZOUHEIR", "AMINE", "ANOUAR", "OMAR", "YASSIN"};
 	std::string ranTypes[3] = {"TypeA", "TypeB", "TypeC"};
 	srand(clock());
  	int ranN = 0 + (rand() % 5);

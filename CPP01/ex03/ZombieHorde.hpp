@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 11:37:13 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/10 14:31:48 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/11 16:50:04 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,13 @@
 class ZombieHorde
 {
 private:
-	int _nZombies;
 	Zombie* zom;
+	int _nZombies;
 public:
 	void createNZombie();
 	void announce();
 	ZombieHorde(int N);
 	~ZombieHorde();
 };
-
-
 
 #endif

@@ -6,14 +6,15 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 12:15:23 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/10 14:35:30 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/11 16:47:44 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ZombieHorde.hpp"
 
-ZombieHorde::ZombieHorde(int N): _nZombies(N), zom(NULL)
+ZombieHorde::ZombieHorde(int N): _nZombies(N)
 {
+	zom = new Zombie[N];
 }
 
 ZombieHorde::~ZombieHorde()
@@ -23,8 +24,6 @@ ZombieHorde::~ZombieHorde()
 
 void ZombieHorde::createNZombie()
 {
-	zom = new Zombie[_nZombies];
-	
 	for (int i = 0; i < _nZombies; i++)
 		zom[i] = Zombie();
 }

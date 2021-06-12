@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 14:10:04 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/10 11:40:04 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/11 17:01:55 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ private:
 	std::string _name;
 	std::string _type;
 public:
+	Zombie();
 	Zombie(std::string _argName);
 	~Zombie();
 	void announce();

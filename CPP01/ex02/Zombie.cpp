@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 14:15:23 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/10 11:39:56 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/12 16:46:37 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ void Zombie::setType(std::string _argType)
 
 void Zombie::announce()
 {
-	std::cout << getName() << ' ' << getType() << ' ' << "Braiiiiiiinnnssss..." << std::endl;
+	std::cout	<< getName()
+				<< ' ' << getType()
+				<< ' ' << "Braiiiiiiinnnssss..."
+				<< std::endl;
 }
 
 

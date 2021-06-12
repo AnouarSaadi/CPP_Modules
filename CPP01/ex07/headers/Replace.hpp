@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   replace.hpp                                        :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 18:37:54 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/09 18:39:33 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/11 14:42:46 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ private:
 	std::string _s1;
 	std::string _s2;
 public:
-	Replace(/* args */);
+	Replace();
 	~Replace();
 	bool replaceFunc();
 	bool parsArgs(int argc, char const *argv[]);
