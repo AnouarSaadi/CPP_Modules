@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/16 12:35:21 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/19 13:17:04 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/20 12:03:21 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/21 14:50:03 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 # include <iostream>
 # include <string>
 
-class FragTrap
+class ScavTrap
 {
 private:
 	std::string	_name;
@@ -28,28 +28,33 @@ private:
 	int			_meleeAttackDamage;
 	int			_rangedAttackDamage;
 	int			_armorDamageReduction;
-	FragTrap( void );
+	ScavTrap( void );
 public:
-	FragTrap( std::string const & );
-	FragTrap( FragTrap const & );
-	~FragTrap();
-	FragTrap & operator=( FragTrap const & );
+	ScavTrap( std::string const & name);
+	ScavTrap( ScavTrap const & copy);
+	~ScavTrap();
+	ScavTrap & operator= ( ScavTrap const & orig );
+	int rangedAttack( std::string const & target );
+	int meleeAttack( std::string const & target );
 
-	int rangedAttack( std::string const & );
-	int meleeAttack( std::string const & );
-
-	void takeDamage( unsigned int );
-	void beRepaired( unsigned int );
+	void takeDamage( unsigned int amount );
+	void beRepaired( unsigned int amount );
 
 	int getMeleeAttackDamage();
 	int getRangeAttackDamage();
 
-	int vaulthunter_dot_exe( std::string const & target );
-	int rocketLauncherAttack( std::string const & );
-	int laserAttack( std::string const & );
-	int shotgunAttack( std::string const & );
-	int pistolAttack( std::string const & );
-	int sniperRifleAttack( std::string const & );
+	void challengeNewcomer();
+	void sniperKillChallenges();
+	void humanKillChallenges();
+	void fireKillChallenges();
+	void explosiveKillChallenges();
+	void duelChallenges();
+
 };
 
 #endif
+
+// Willhelm
+// RedBelly
+// Jack
+// Nisha

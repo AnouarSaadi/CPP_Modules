@@ -6,11 +6,12 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 12:35:25 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/20 10:13:14 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/21 12:57:45 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {

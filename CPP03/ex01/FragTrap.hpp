@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 12:35:21 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/19 13:17:04 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/21 11:54:19 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,26 +30,26 @@ private:
 	int			_armorDamageReduction;
 	FragTrap( void );
 public:
-	FragTrap( std::string const & );
-	FragTrap( FragTrap const & );
+	FragTrap( std::string const & name );
+	FragTrap( FragTrap const & copy );
 	~FragTrap();
-	FragTrap & operator=( FragTrap const & );
+	FragTrap & operator=( FragTrap const & orig );
 
-	int rangedAttack( std::string const & );
-	int meleeAttack( std::string const & );
+	int rangedAttack( std::string const & target );
+	int meleeAttack( std::string const & target );
 
-	void takeDamage( unsigned int );
-	void beRepaired( unsigned int );
+	void takeDamage( unsigned int amount );
+	void beRepaired( unsigned int amount );
 
 	int getMeleeAttackDamage();
 	int getRangeAttackDamage();
 
 	int vaulthunter_dot_exe( std::string const & target );
-	int rocketLauncherAttack( std::string const & );
-	int laserAttack( std::string const & );
-	int shotgunAttack( std::string const & );
-	int pistolAttack( std::string const & );
-	int sniperRifleAttack( std::string const & );
+	int rocketLauncherAttack( std::string const & target );
+	int laserAttack( std::string const & target );
+	int shotgunAttack( std::string const & target );
+	int pistolAttack( std::string const & target );
+	int sniperRifleAttack( std::string const & target );
 };
 
 #endif
