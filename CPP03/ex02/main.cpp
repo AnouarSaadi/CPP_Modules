@@ -6,17 +6,19 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 12:35:25 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/23 11:22:40 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/23 12:59:34 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
 	std::cout << "The party of FR4G-TPs will start soon..." << std::endl;
 	ClapTrap *clTrap[4];
 	ScavTrap *scTrap[4];
+	FragTrap *frTrap[4];
 	clTrap[0] = new ClapTrap("Athena");
 	scTrap[0] = new ScavTrap("Willhelm");
 	clTrap[2] = new ClapTrap("Salvador");
@@ -41,8 +43,9 @@ int main()
 	scTrap[1]->guardGate();
 	for (int i = 0; i < 4; i++)
 	{
-		delete clTrap[i];
 		delete scTrap[i];
+		delete clTrap[i];
+		// delete frTrap[i];
 	}
 	std::cout << "All the Robots has been destroyed. The party ended!!!!!" << std::endl;
 	return 0;

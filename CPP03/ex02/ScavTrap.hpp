@@ -6,15 +6,12 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 12:03:21 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/23 11:26:52 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/23 11:41:07 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
-
-# include <iostream>
-# include <string>
 
 # include "ClapTrap.hpp"
 
