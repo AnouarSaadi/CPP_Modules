@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 12:03:24 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/23 11:27:18 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/25 17:02:44 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 ScavTrap::ScavTrap( void )
 {}
 
-ScavTrap::ScavTrap( std::string const & name )
+ScavTrap::ScavTrap( std::string const & name ) : ClapTrap::ClapTrap(name)
 {
-	this->_name = name;
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 20;

@@ -6,22 +6,24 @@
 #    By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/22 18:33:40 by asaadi            #+#    #+#              #
-#    Updated: 2021/06/24 10:36:18 by asaadi           ###   ########.fr        #
+#    Updated: 2021/06/25 17:26:27 by asaadi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = FragTrap
+NAME = DiamondTrap
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
 
 SRCS = main.cpp \
 		ClapTrap.cpp \
 		ScavTrap.cpp \
-		FragTrap.cpp
+		FragTrap.cpp \
+		DiamondTrap.cpp
 			
 HDRS = ClapTrap.hpp \
 		ScavTrap.hpp \
-		FragTrap.hpp
+		FragTrap.hpp \
+		DiamondTrap.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 

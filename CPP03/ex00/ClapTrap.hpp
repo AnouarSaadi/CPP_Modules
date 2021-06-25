@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 12:35:21 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/22 18:59:41 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/25 16:13:29 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ private:
 	int			_hitPoints;
 	int			_energyPoints;
 	int			_attackDamage;
-public:
 	ClapTrap( void );
+public:
 	ClapTrap( std::string const & name );
 	ClapTrap( ClapTrap const & copy );
 	~ClapTrap();

@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/16 12:35:21 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/25 16:43:58 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/24 10:44:59 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/25 17:17:16 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
 
-# include <iostream>
-# include <string>
+# include "FragTrap.hpp"
+# include "ScavTrap.hpp"
 
-class ClapTrap
+class DiamondTrap : public FragTrap, public ScavTrap
 {
-protected:
-	std::string	_name;
-	int			_hitPoints;
-	int			_energyPoints;
-	int			_attackDamage;
-	ClapTrap(void);
+private:
+	std::string _name;
 public:
-	ClapTrap(std::string const & name);
-	ClapTrap(ClapTrap const & orig);
-	~ClapTrap();
-	ClapTrap & operator=(ClapTrap const & orig);
-
+	DiamondTrap(void);
+	DiamondTrap(std::string const & name);
+	DiamondTrap(DiamondTrap const & orig);
+	~DiamondTrap();
 	int attack(std::string const & target);
+	DiamondTrap & operator= (DiamondTrap const & orig);
 
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
-
-	int getAttackDamage();
+	void whoAmI();
+	
 };
 
 #endif

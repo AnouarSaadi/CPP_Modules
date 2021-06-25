@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 12:35:27 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/23 11:27:16 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/24 10:37:09 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ ClapTrap::ClapTrap( void )
 ClapTrap::ClapTrap( std::string const & name ) : _name(name), _hitPoints(10),
 _energyPoints(10), _attackDamage(0)
 {
-	std::cout 	<< "Hey there! I'm a CL4P-TP and My name is "
-				<< this->_name << ". Let's get this party started. Cheers!"
+	std::cout 	<< this->_name<< ": CL4P-TP Hey there! Let's get this party started. Cheers!"
 				<< std::endl;
 }
 

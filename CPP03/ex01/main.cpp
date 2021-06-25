@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 12:35:25 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/23 11:22:40 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/25 16:59:59 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	std::cout << "The party of FR4G-TPs will start soon..." << std::endl;
+	std::cout << "The party will be start soon..." << std::endl;
 	ClapTrap *clTrap[4];
 	ScavTrap *scTrap[4];
 	clTrap[0] = new ClapTrap("Athena");
