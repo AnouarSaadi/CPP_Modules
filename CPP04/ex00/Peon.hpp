@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 14:47:40 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/27 14:58:41 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/28 15:02:13 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	Peon();
 	Peon(std::string const & name);
 	Peon(Peon const & orig);
-	~Peon();
+	virtual ~Peon();
 	Peon & operator=(Peon const & orig);
 
 	void getPolymorphed() const;

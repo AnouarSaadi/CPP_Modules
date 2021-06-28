@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   AWeapon.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/27 14:07:54 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/28 15:02:03 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/28 12:14:49 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/28 14:39:16 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM_HPP
-# define VICTIM_HPP
+#ifndef AWEAPON_HPP
+# define AWEAPON_HPP
 
 # include <iostream>
 # include <string>
 
-class Victim
+class AWeapon /* Coplien form */
 {
 protected:
 	std::string _name;
-	Victim();
+	int			_apCostPoints;
+	int			_damagePoints;
+	
 public:
-	Victim(std::string const & name);
-	Victim(Victim const & orig);
-	virtual ~Victim();
-	Victim & operator=(Victim const & orig);
-
-	std::string const & getVictimName();
-
-	virtual void getPolymorphed() const;
+	AWeapon();
+	AWeapon(std::string const & name, int apcost, int damage);
+	AWeapon(AWeapon const & orig);
+	virtual ~AWeapon();
+	AWeapon & operator=(AWeapon const & orig);
+	std::string const & getName() const;
+	int getAPCost() const;
+	int getDamage() const;
+	virtual void attack() const = 0;
 };
-
-std::ostream & operator<<(std::ostream & os, Victim & arg);
 
 #endif

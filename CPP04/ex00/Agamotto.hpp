@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Agamotto.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/27 15:01:11 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/28 11:39:01 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/28 11:03:42 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/28 15:02:26 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Sorcerer.hpp"
+#ifndef AGAMOTTO_HPP
+# define AGAMOTTO_HPP
 
-int main()
+# include "Victim.hpp"
+
+class Agamotto : public Victim
 {
-	Sorcerer robert("Robert", "the Magnificent");
-	Victim jim("Jimmy");
-	Peon joe("Joe");
-	Agamotto bob("Bob");
-	Hoggoth jack("Jack");
-	std::cout << robert << jim << joe << bob << jack;
-	robert.polymorph(jim);
-	robert.polymorph(joe);
-	robert.polymorph(bob);
-	robert.polymorph(jack);
-	return 0;
-}
+public:
+	Agamotto();
+	Agamotto(std::string const & name);
+	Agamotto(Agamotto const & orig);
+	virtual ~Agamotto();
+	Agamotto & operator=(Agamotto const & orig);
+
+	void getPolymorphed() const;
+};
+
+#endif

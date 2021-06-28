@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 10:36:53 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/27 15:01:45 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/28 11:35:38 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <string>
 # include "Victim.hpp"
 # include "Peon.hpp"
+# include "Agamotto.hpp"
+# include "Hoggoth.hpp"
 
 class Sorcerer
 {
