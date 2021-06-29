@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   Chainsaw.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/28 15:46:17 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 10:16:12 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/29 15:01:27 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/29 15:02:14 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-# define SUPERMUTANT_HPP
+#ifndef CHAINSAW_HPP
+# define CHAINSAW_HPP
 
-# include "Enemy.hpp"
+# include "AWeapon.hpp"
 
-class SuperMutant : public Enemy
+class Chainsaw : public AWeapon
 {
 public:
-	SuperMutant();
-	SuperMutant(SuperMutant const & orig);
-	virtual ~SuperMutant();
-	SuperMutant & operator=(SuperMutant const & orig);
+	Chainsaw();
+	Chainsaw(Chainsaw const & orig);
+	virtual ~Chainsaw();
+	Chainsaw & operator=(Chainsaw const & orig);
 
-	void takeDamage(int amount);
+	void attack() const;
 };
 
 #endif

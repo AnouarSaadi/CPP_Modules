@@ -1,43 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PowerFist.cpp                                      :+:      :+:    :+:   */
+/*   Cyberdemon.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/28 15:11:42 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 13:22:31 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/29 14:41:06 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/29 15:23:09 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PowerFist.hpp"
+#include "Cyberdemon.hpp"
 
-PowerFist::PowerFist(): AWeapon("Power Fist", 8, 50)
+Cyberdemon::Cyberdemon(): Enemy(210, "Cyber Demon")
 {
+	std::cout << "* I AM HUGE *" << std::endl;
 }
 
-PowerFist::~PowerFist()
-{
-}
-
-PowerFist::PowerFist(PowerFist const & orig)
+Cyberdemon::Cyberdemon(Cyberdemon const & orig)
 {
 	*this = orig;
 	return ;
 }
 
-PowerFist & PowerFist::operator=(PowerFist const & orig)
+Cyberdemon::~Cyberdemon()
+{
+	std::cout << "* RIP AND TEAR *" << std::endl;
+}
+
+Cyberdemon & Cyberdemon::operator=(Cyberdemon const & orig)
 {
 	if (this != &orig)
 	{
-		this->_name = orig._name;
-		this->_apCostPoints = orig._apCostPoints;
-		this->_damagePoints = orig._damagePoints;
+		this->_hitPoints = orig._hitPoints;
+		this->_type = orig._type;
 	}
 	return *this;
-}
-
-void PowerFist::attack() const
-{
-	std::cout << "* pschhh... SBAM! *" << std::endl;
 }

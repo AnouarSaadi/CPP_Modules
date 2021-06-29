@@ -6,11 +6,14 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 15:25:51 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/28 15:45:41 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/06/29 10:51:29 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Enemy.hpp"
+
+Enemy::Enemy()
+{}
 
 Enemy::Enemy(int hp, std::string const & type): _hitPoints(hp), _type(type)
 {
@@ -51,8 +54,7 @@ void Enemy::takeDamage(int amount)
 {
 	if (this->_hitPoints > 0)
 	{
-		this->_hitPoints -= amount;
-		if (this->_hitPoints < 0)
+		if ((this->_hitPoints -= amount) < 0)
 			this->_hitPoints = 0;
 	}
 }

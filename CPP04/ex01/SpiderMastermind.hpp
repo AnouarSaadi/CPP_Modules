@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   SpiderMastermind.hpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/28 15:46:17 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 10:16:12 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/29 14:54:15 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/29 14:54:49 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-# define SUPERMUTANT_HPP
+#ifndef SPIDERMASTERMIND_HPP
+# define SPIDERMASTERMIND_HPP
 
 # include "Enemy.hpp"
 
-class SuperMutant : public Enemy
+class SpiderMastermind: public Enemy
 {
 public:
-	SuperMutant();
-	SuperMutant(SuperMutant const & orig);
-	virtual ~SuperMutant();
-	SuperMutant & operator=(SuperMutant const & orig);
-
-	void takeDamage(int amount);
+	SpiderMastermind();
+	SpiderMastermind(SpiderMastermind const & orig);
+	virtual ~SpiderMastermind();
+	SpiderMastermind & operator=(SpiderMastermind const & orig);
 };
 
 #endif

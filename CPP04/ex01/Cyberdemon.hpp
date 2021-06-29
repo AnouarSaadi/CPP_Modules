@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   Cyberdemon.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/28 15:46:17 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 10:16:12 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/29 14:40:14 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/29 14:40:55 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-# define SUPERMUTANT_HPP
+#ifndef CYBERDEMON_HPP
+# define CYBERDEMON_HPP
 
 # include "Enemy.hpp"
 
-class SuperMutant : public Enemy
+class Cyberdemon: public Enemy
 {
 public:
-	SuperMutant();
-	SuperMutant(SuperMutant const & orig);
-	virtual ~SuperMutant();
-	SuperMutant & operator=(SuperMutant const & orig);
-
-	void takeDamage(int amount);
+	Cyberdemon();
+	Cyberdemon(Cyberdemon const & orig);
+	virtual ~Cyberdemon();
+	Cyberdemon & operator=(Cyberdemon const & orig);
 };
 
 #endif

@@ -1,57 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AWeapon.cpp                                        :+:      :+:    :+:   */
+/*   Chainsaw.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/28 12:15:24 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 09:53:35 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/29 15:02:22 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/29 15:04:50 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AWeapon.hpp"
+#include "Chainsaw.hpp"
 
-AWeapon::AWeapon()
-{}
-
-AWeapon::AWeapon(std::string const & name, int apcost, int damage):
-_name(name), _apCostPoints(apcost), _damagePoints(damage)
+Chainsaw::Chainsaw(): AWeapon("Chainsaw", 9, 31)
 {
 }
 
-AWeapon::~AWeapon()
+Chainsaw::~Chainsaw()
 {
 }
 
-AWeapon::AWeapon(AWeapon const & orig)
+Chainsaw::Chainsaw(Chainsaw const & orig)
 {
 	*this = orig;
-	return;
+	return ;
 }
 
-AWeapon & AWeapon::operator=(AWeapon const & orig)
+Chainsaw & Chainsaw::operator=(Chainsaw const & orig)
 {
 	if (this != &orig)
 	{
 		this->_name = orig._name;
-		this->_damagePoints = orig._damagePoints;
 		this->_apCostPoints = orig._apCostPoints;
+		this->_damagePoints = orig._damagePoints;
 	}
 	return *this;
 }
 
-std::string const & AWeapon::getName() const
+void Chainsaw::attack() const
 {
-	return this->_name;
-}
-
-int AWeapon::getAPCost() const
-{
-	return this->_apCostPoints;
-}
-
-int AWeapon::getDamage() const
-{
-	return this->_damagePoints;
+	std::cout << "* Cha-cha-cha-chainsaw, chainsaw *" << std::endl;
 }

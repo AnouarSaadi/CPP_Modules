@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   RadScorpion.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/28 15:46:17 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 10:16:12 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/29 09:57:24 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/29 10:01:08 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-# define SUPERMUTANT_HPP
+#ifndef RADSCORPION_HPP
+# define RADSCORPION_HPP
 
 # include "Enemy.hpp"
 
-class SuperMutant : public Enemy
+class RadScorpion: public Enemy
 {
 public:
-	SuperMutant();
-	SuperMutant(SuperMutant const & orig);
-	virtual ~SuperMutant();
-	SuperMutant & operator=(SuperMutant const & orig);
-
-	void takeDamage(int amount);
+	RadScorpion();
+	RadScorpion(RadScorpion const & orig);
+	virtual ~RadScorpion();
+	RadScorpion & operator=(RadScorpion const & orig);
 };
 
 #endif

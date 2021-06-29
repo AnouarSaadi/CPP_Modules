@@ -1,43 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PowerFist.cpp                                      :+:      :+:    :+:   */
+/*   RadScorpion.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/28 15:11:42 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 13:22:31 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/29 09:58:18 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/29 10:02:51 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PowerFist.hpp"
+#include "RadScorpion.hpp"
 
-PowerFist::PowerFist(): AWeapon("Power Fist", 8, 50)
+RadScorpion::RadScorpion(): Enemy(80, "RadScorpion")
 {
+	std::cout << "* click click click *" << std::endl;
 }
 
-PowerFist::~PowerFist()
-{
-}
-
-PowerFist::PowerFist(PowerFist const & orig)
+RadScorpion::RadScorpion(RadScorpion const & orig)
 {
 	*this = orig;
 	return ;
 }
 
-PowerFist & PowerFist::operator=(PowerFist const & orig)
+RadScorpion::~RadScorpion()
+{
+	std::cout << "* SPROTCH *" << std::endl;
+}
+
+RadScorpion & RadScorpion::operator=(RadScorpion const & orig)
 {
 	if (this != &orig)
 	{
-		this->_name = orig._name;
-		this->_apCostPoints = orig._apCostPoints;
-		this->_damagePoints = orig._damagePoints;
+		this->_hitPoints = orig._hitPoints;
+		this->_type = orig._type;
 	}
 	return *this;
-}
-
-void PowerFist::attack() const
-{
-	std::cout << "* pschhh... SBAM! *" << std::endl;
 }

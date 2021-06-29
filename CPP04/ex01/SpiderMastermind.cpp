@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.cpp                                    :+:      :+:    :+:   */
+/*   SpiderMastermind.cpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/28 15:46:19 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 10:17:18 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/29 14:54:55 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/29 15:21:37 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "SuperMutant.hpp"
+#include "SpiderMastermind.hpp"
 
-SuperMutant::SuperMutant(): Enemy(170, "Super Mutant")
+SpiderMastermind::SpiderMastermind(): Enemy(190, "Spider Mastermind")
 {
-	std::cout <<  "Gaaah. Me want smash heads!" << std::endl;
+	std::cout << "* I AM SPIDER *" << std::endl;
 }
 
-SuperMutant::SuperMutant(SuperMutant const & orig)
+SpiderMastermind::SpiderMastermind(SpiderMastermind const & orig)
 {
 	*this = orig;
 	return ;
 }
 
-SuperMutant::~SuperMutant()
+SpiderMastermind::~SpiderMastermind()
 {
-	std::cout << "Aaargh..." << std::endl;
+	std::cout << "* Na na na na *" << std::endl;
 }
 
-SuperMutant & SuperMutant::operator=(SuperMutant const & orig)
+SpiderMastermind & SpiderMastermind::operator=(SpiderMastermind const & orig)
 {
 	if (this != &orig)
 	{
@@ -37,9 +37,3 @@ SuperMutant & SuperMutant::operator=(SuperMutant const & orig)
 	}
 	return *this;
 }
-
-void SuperMutant::takeDamage(int amount)
-{
-	Enemy::takeDamage(amount - 3);
-}
- 
