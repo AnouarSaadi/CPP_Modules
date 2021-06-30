@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ISquad.hpp                                         :+:      :+:    :+:   */
+/*   ISpaceMarine.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/29 15:37:46 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/30 11:19:27 by asaadi           ###   ########.fr       */
+/*   Created: 2021/06/30 11:04:11 by asaadi            #+#    #+#             */
+/*   Updated: 2021/06/30 11:07:01 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ISQUAD_HPP
-# define ISQUAD_HPP
+#ifndef ISPACEMARINE_HPP
+# define ISPACEMARINE_HPP
 
-class ISquad
+class ISpaceMarine
 {
 public:
-	ISquad();
-	ISquad(ISquad const & orig);
-	virtual ~ISquad() {}
-	ISquad & operator=(ISquad const & orig);
-	virtual int getCount() const = 0;
-	virtual ISpaceMarine* getUnit(int) const = 0;
-	virtual int push(ISpaceMarine*) = 0;
+	ISpaceMarine();
+	ISpaceMarine(ISpaceMarine const & orig);
+	virtual ~ISpaceMarine() {}
+	ISpaceMarine & operator=(ISpaceMarine const & orig);
+
+	virtual ISpaceMarine* clone() const = 0;
+	virtual void battleCry() const = 0;
+	virtual void rangedAttack() const = 0;
+	virtual void meleeAttack() const = 0;
 };
 
 #endif
