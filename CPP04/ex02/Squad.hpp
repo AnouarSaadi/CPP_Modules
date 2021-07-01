@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 10:17:30 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/30 12:12:44 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/01 16:33:14 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <string>
 # include "ISquad.hpp"
 # include "ISpaceMarine.hpp"
+# include "AssaultTerminator.hpp"
+# include "TacticalMarine.hpp"
 
 typedef struct s_list
 {
@@ -37,6 +39,8 @@ public:
 	int getCount() const;
 	ISpaceMarine* getUnit(int) const;
 	int push(ISpaceMarine*);
+
+	void	clearing_squad();
 };
 
 #endif
