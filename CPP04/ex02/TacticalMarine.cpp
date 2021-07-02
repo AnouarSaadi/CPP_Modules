@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 15:42:01 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/01 19:03:05 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/02 10:58:20 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,9 @@ TacticalMarine & TacticalMarine::operator=(TacticalMarine const & orig)
 
 ISpaceMarine* TacticalMarine::clone() const
 {
-	return (ISpaceMarine*)this;
+	TacticalMarine* ret = new TacticalMarine;
+	*ret = *this;
+	return ret;
 }
 
 void TacticalMarine::battleCry() const
