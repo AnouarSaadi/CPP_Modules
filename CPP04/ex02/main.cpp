@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 16:23:13 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/02 11:11:26 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/03 12:07:27 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main()
 		cur->meleeAttack();
 	}
 	delete vlc;
-	
+	std::cout << "Check all the code is work well..." << std::endl;
 	ISpaceMarine* jack = new TacticalMarine;
 	ISpaceMarine* bin = new AssaultTerminator;
 	ISquad* squad_ = new Squad;

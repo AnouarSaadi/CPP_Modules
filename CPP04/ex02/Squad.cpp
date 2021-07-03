@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 10:18:07 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/01 18:05:34 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/03 12:09:40 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Squad::Squad(Squad const & orig)
 	return ;
 }
 
-void	Squad::clearing_squad()
+Squad::~Squad()
 {
 	t_list *tmp;
 	while (this->_units)
@@ -34,25 +34,19 @@ void	Squad::clearing_squad()
 	}
 }
 
-Squad::~Squad()
-{
-	clearing_squad();
-}
-
 Squad & Squad::operator=(Squad const & orig)
 {
 	if (this != &orig)
 	{
-		this->clearing_squad();
+		delete this;
 		Squad *_new = new Squad;
 		t_list *tmp = orig._units;
-		while (orig._units)
+		while (tmp)
 		{
-			ISpaceMarine *_newUnit = tmp->unit;
-			push(_newUnit);
+			push(tmp->unit);
 			tmp = tmp->next;
 		}
-		return *_new;
+		*this = *_new;
 	}
 	return *this;
 }

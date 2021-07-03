@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 15:51:03 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/02 16:07:13 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/03 14:35:20 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ unsigned int AMateria::getXP() const
 
 void AMateria::use(ICharacter& target)
 {
+	(void)target;
 	this->_xp +=10;
 }

@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 10:17:30 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/01 16:33:14 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/03 11:13:37 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ public:
 	int getCount() const;
 	ISpaceMarine* getUnit(int) const;
 	int push(ISpaceMarine*);
-
-	void	clearing_squad();
 };
 
 #endif

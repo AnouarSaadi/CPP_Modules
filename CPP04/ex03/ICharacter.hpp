@@ -6,14 +6,18 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 15:03:34 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/02 15:04:36 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/03 15:07:04 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
 
+# include <iostream>
+# include <string>
 # include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {
@@ -25,4 +29,4 @@ public:
 	virtual void use(int idx, ICharacter& target) = 0;
 };
 
-#endif /* ICHARACTER_HPP */
+#endif
