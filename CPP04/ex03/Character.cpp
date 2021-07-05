@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 15:06:36 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/03 14:26:00 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 16:55:51 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,27 @@ Character::Character(Character const & orig)
 	return ;
 }
 
+void Character::destroyMaterias()
+{
+	for (int i = 0; i < this->_numberOfMateria; i++)
+		delete this->_materia[i];
+	delete [] this->_materia;
+}
+
 Character::~Character()
 {
-	for (int i = 0; i < _numberOfMateria; i++)
-		delete _materia[i];
-	delete [] _materia;
+	this->destroyMaterias();
 }
 
 Character & Character::operator=(Character const & orig)
 {
 	if (this != &orig)
 	{
-		delete this;
-		Character* _new = new Character(orig.getName());
-		for (int i = 0; i < 4; i++)
-			_new->_materia[i] = orig._materia[i];
-		*this = *_new;
+		this->destroyMaterias();
+		this->_name = orig._name;
+		this->_numberOfMateria = orig._numberOfMateria;
+		for (int i = 0; i < this->_numberOfMateria; i++)
+			this->_materia[i] = orig._materia[i]->clone();
 	}
 	return *this;
 }
@@ -59,24 +64,24 @@ void Character::equip(AMateria* m)
 	if (m && _numberOfMateria < 4)
 		this->_materia[_numberOfMateria++] = m;
 	else if (!m)
-		std::cout << "Invalid materia." << std::endl;
+		std::cout << "Materia nonexistent." << std::endl;
 	else
-		std::cout << "Full inventory." << std::endl;
+		std::cout << "Inventory is full." << std::endl;
 }
 
 void Character::unequip(int idx)
 {
 	if (idx >= 0 && idx < _numberOfMateria)
 	{
-		if (idx == 3)
+		if (idx == this->_numberOfMateria - 1)
 			this->_materia[idx] = NULL;
 		else
-			for (; idx < _numberOfMateria; idx++)
+			for (; idx < _numberOfMateria - 1; idx++)
 				this->_materia[idx] = this->_materia[idx+1];
 		_numberOfMateria--;
 	}
 	else
-		std::cout << "the Materia with index " << idx << " is not exist." << std::endl;
+		std::cout << "The Materia with index " << idx << " is not exist." << std::endl;
 }
 
 void Character::use(int idx, ICharacter& target)

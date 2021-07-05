@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 10:36:53 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/28 11:35:38 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 11:44:11 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ class Sorcerer
 private:
 	std::string _name;
 	std::string _title;
-public:
 	Sorcerer();
+	
+public:
 	Sorcerer(std::string const & name, std::string const & title);
 	Sorcerer(Sorcerer const & orig);
 	~Sorcerer();

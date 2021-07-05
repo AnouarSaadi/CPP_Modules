@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 10:04:43 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 14:18:37 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 11:57:57 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,16 @@ void Character::attack(Enemy* enemy)
 		<< " with a " << this->_currentWeapon->getName()
 		<< std::endl;
 	if (this->_actionPoints)
+	{
 		if ((this->_actionPoints -= this->_currentWeapon->getAPCost()) < 0)
 			this->_actionPoints = 0;
-	enemy->takeDamage(this->_currentWeapon->getDamage());
-	this->_currentWeapon->attack();
-	if (!enemy->getHP())
-		delete enemy;
+		enemy->takeDamage(this->_currentWeapon->getDamage());
+		this->_currentWeapon->attack();
+		if (!enemy->getHP())
+			delete enemy;
+	}
+	else
+		std::cout << this->_name << " has no AP to attack the enemy" << std::endl;
 }
 
 std::string const & Character::getName() const

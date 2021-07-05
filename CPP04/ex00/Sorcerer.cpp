@@ -6,11 +6,14 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 10:42:31 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/27 15:33:32 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 11:36:00 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Sorcerer.hpp"
+
+Sorcerer::Sorcerer()
+{}
 
 Sorcerer::Sorcerer(std::string const & name, std::string const & title): _name(name), _title(title)
 {
@@ -34,7 +37,6 @@ Sorcerer::~Sorcerer()
 
 Sorcerer & Sorcerer::operator=(Sorcerer const & orig)
 {
-	// Need to learn about deep copy.
 	if (this != &orig)
 	{
 		this->_name = orig._name;

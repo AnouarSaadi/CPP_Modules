@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/03 13:10:55 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/03 15:08:44 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 15:46:47 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class MateriaSource: public  IMateriaSource
 private:
 	AMateria	**_materia;
 	int			_numberOfMateria;
+	void destroyMaterias();
 
 public:
 	MateriaSource();

@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 15:04:55 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/03 15:09:03 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 15:33:33 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ private:
 	std::string _name;
 	AMateria	**_materia;
 	int			_numberOfMateria;
+	void destroyMaterias();
 
 public:
 	Character();

@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 14:07:54 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/28 15:02:03 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 11:44:21 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,14 @@ class Victim
 {
 protected:
 	std::string _name;
-	Victim();
 public:
+	Victim();
 	Victim(std::string const & name);
 	Victim(Victim const & orig);
 	virtual ~Victim();
 	Victim & operator=(Victim const & orig);
 
 	std::string const & getVictimName();
-
 	virtual void getPolymorphed() const;
 };
 

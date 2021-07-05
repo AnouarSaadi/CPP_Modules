@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 10:17:30 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/03 11:13:37 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 15:06:18 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ typedef struct s_list
 class Squad : public ISquad
 {
 private:
-	t_list *_units;
+	t_list	*_units;
+	int		_count;
 	
 public:
 	Squad();
@@ -39,6 +40,7 @@ public:
 	int getCount() const;
 	ISpaceMarine* getUnit(int) const;
 	int push(ISpaceMarine*);
+	void destroyUnits();
 };
 
 #endif

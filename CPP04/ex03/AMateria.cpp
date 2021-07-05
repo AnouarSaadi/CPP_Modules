@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 15:51:03 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/03 14:35:20 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 11:03:48 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ AMateria::AMateria(AMateria const & orig)
 {
 	*this = orig;
 	return ;
+}
+
+AMateria::~AMateria()
+{
 }
 
 AMateria & AMateria::operator=(AMateria const & orig)

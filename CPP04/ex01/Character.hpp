@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 10:04:11 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 15:05:30 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 11:44:01 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ private:
 	std::string _name;
 	int			_actionPoints;
 	AWeapon*	_currentWeapon;
-	Character();
 
 public:
+	Character();
 	Character(std::string const & name);
 	Character(Character const & orig);
 	~Character();

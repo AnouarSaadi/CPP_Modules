@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 12:05:15 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 15:27:26 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 11:54:21 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ int main()
 	std::cout << *crank;
 	crank->attack(sm);
 	std::cout << *crank;
+	crank->recoverAP();
+	std::cout << "crank after recovery has " << crank->getAPoints() << " AP." << std::endl;
 	if (sm->getHP())
 		delete sm;
 	delete crank;

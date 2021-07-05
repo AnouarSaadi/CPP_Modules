@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 15:39:01 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/02 09:47:29 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 12:56:30 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,7 @@ AssaultTerminator & AssaultTerminator::operator=(AssaultTerminator const & orig)
 
 ISpaceMarine* AssaultTerminator::clone() const
 {
-	AssaultTerminator* ret = new AssaultTerminator;
-	*ret = *this;
-	return ret;
+	return new AssaultTerminator;
 }
 
 void AssaultTerminator::battleCry() const

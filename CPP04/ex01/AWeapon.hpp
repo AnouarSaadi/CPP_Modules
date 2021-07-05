@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 12:14:49 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 13:32:17 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/04 11:49:19 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ protected:
 	std::string _name;
 	int			_apCostPoints;
 	int			_damagePoints;
-	AWeapon(); /* Coplien form */
 	
 public:
+	AWeapon();
 	AWeapon(std::string const & name, int apcost, int damage);
 	AWeapon(AWeapon const & orig);
 	virtual ~AWeapon();
