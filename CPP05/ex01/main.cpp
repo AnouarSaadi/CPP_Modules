@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 18:32:15 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/05 11:55:02 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/06 10:30:43 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int main()
 	try
 	{
 		Bureaucrat b("ex1", 0);
+		Form f("form1", 10, 10);
+		std::cout << f;
 	}
 	catch(std::exception& e)
 	{
@@ -38,11 +40,17 @@ int main()
 	{
 		Bureaucrat b("ex3", 5);
 		std::cout << b;
+		Form f("form1", 3, 6);
+		std::cout << f;
+		b.signForm(f);
+		std::cout << f;
 		b.incrementGrade();
 		std::cout << b;
 		b.incrementGrade();
 		std::cout << b;
 		b.incrementGrade();
+		b.signForm(f);
+		std::cout << f;
 		std::cout << b;
 		b.incrementGrade();
 		std::cout << b;

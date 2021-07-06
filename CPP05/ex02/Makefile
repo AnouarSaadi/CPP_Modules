@@ -6,20 +6,24 @@
 #    By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/04 17:26:40 by asaadi            #+#    #+#              #
-#    Updated: 2021/07/06 09:37:42 by asaadi           ###   ########.fr        #
+#    Updated: 2021/07/06 18:43:05 by asaadi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex01
+NAME = ex02
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp \
 		Bureaucrat.cpp \
-		Form.cpp
+		Form.cpp \
+		ShrubberyCreationForm.cpp \
+		RobotomyRequestForm.cpp
 			
 HDRS = Bureaucrat.hpp \
-		Form.hpp
+		Form.hpp \
+		ShrubberyCreationForm.hpp \
+		RobotomyRequestForm.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 

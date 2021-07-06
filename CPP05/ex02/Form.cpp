@@ -6,14 +6,18 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 11:58:33 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/06 10:29:49 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/06 12:23:15 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(std::string const & name, int gradeS, int gradeE): _name(name), _sign(false),
-_gradeSign(gradeS), _gradeExec(gradeE)
+Form::Form(): _name("default"), _sign(false), _gradeSign(1), _gradeExec(1)
+{
+}
+
+Form::Form(std::string const & name, int gradeS, int gradeE, std::string const & target) :
+_name(name), _sign(false), _gradeSign(gradeS), _gradeExec(gradeE), _target(target)
 {
 	if (_gradeSign < 1)
 		throw GradeTooHighException();
@@ -39,13 +43,21 @@ Form::~Form()
 Form & Form::operator=(Form const & src)
 {
 	if (this != &src)
+	{
 		this->_sign = src._sign;
+		this->_target = src._target;
+	}
 	return *this;
 }
 
 std::string const & Form::getName() const
 {
 	return this->_name;
+}
+
+std::string const & Form::getTarget() const
+{
+	return this->_target;
 }
 
 int Form::getGradeSign() const
