@@ -6,11 +6,11 @@
 #    By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/04 17:26:40 by asaadi            #+#    #+#              #
-#    Updated: 2021/07/07 12:41:27 by asaadi           ###   ########.fr        #
+#    Updated: 2021/07/07 17:10:47 by asaadi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex02
+NAME = ex03
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -19,13 +19,15 @@ SRCS = main.cpp \
 		Form.cpp \
 		ShrubberyCreationForm.cpp \
 		RobotomyRequestForm.cpp \
-		PresidentialPardonForm.cpp
+		PresidentialPardonForm.cpp \
+		Intern.cpp
 			
 HDRS = Bureaucrat.hpp \
 		Form.hpp \
 		ShrubberyCreationForm.hpp \
 		RobotomyRequestForm.hpp \
-		PresidentialPardonForm.hpp
+		PresidentialPardonForm.hpp \
+		Intern.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 

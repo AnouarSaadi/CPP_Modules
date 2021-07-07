@@ -6,11 +6,15 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 11:58:33 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/06 10:29:49 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/07 17:51:11 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+
+Form::Form(): _name("default"), _sign(false), _gradeSign(0), _gradeExec(0)
+{
+}
 
 Form::Form(std::string const & name, int gradeS, int gradeE): _name(name), _sign(false),
 _gradeSign(gradeS), _gradeExec(gradeE)
@@ -30,7 +34,6 @@ Form::Form(Form const & src): _name(src._name), _gradeSign(src._gradeSign), _gra
 	*this = src;
 	return ;
 }
-
 
 Form::~Form()
 {

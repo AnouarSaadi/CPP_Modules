@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/06 15:39:37 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/07 13:31:43 by asaadi           ###   ########.fr       */
+/*   Created: 2021/07/07 10:39:52 by asaadi            #+#    #+#             */
+/*   Updated: 2021/07/07 13:31:49 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-# define ROBOTOMYREQUESTFORM_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+# define PRESIDENTIALPARDONFORM_HPP
 
 # include "Form.hpp"
 
-class RobotomyRequestForm: public Form
+class PresidentialPardonForm: public Form
 {
 public:
-	RobotomyRequestForm();
-	RobotomyRequestForm(std::string const & target);
-	RobotomyRequestForm(RobotomyRequestForm const & src);
-	~RobotomyRequestForm();
-	RobotomyRequestForm & operator=(RobotomyRequestForm const & src);
+	PresidentialPardonForm();
+	PresidentialPardonForm(std::string const & target);
+	PresidentialPardonForm(PresidentialPardonForm const & src);
+	~PresidentialPardonForm();
+	PresidentialPardonForm & operator=(PresidentialPardonForm const & src);
 
 	void action() const;
 };

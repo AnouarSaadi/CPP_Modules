@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 11:58:04 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/06 14:34:34 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/07 13:45:32 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ public:
 	bool getSign();
 
 	void beSigned(Bureaucrat &b);
+	virtual void action() const = 0;
 
-	//action
-	virtual void action() = 0;
+	void execute(Bureaucrat const & executor) const;
 
 	class GradeTooHighException: public std::exception
 	{
@@ -52,6 +52,12 @@ public:
 	};
 	
 	class GradeTooLowException: public std::exception
+	{
+	public:
+		const char * what() const throw();
+	};
+
+	class UnsignedFormException: public std::exception
 	{
 	public:
 		const char * what() const throw();
