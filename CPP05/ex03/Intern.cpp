@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 14:08:55 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/07 17:09:34 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/08 14:00:32 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,31 +31,31 @@ Intern & Intern::operator=(Intern const &src)
 	return *this;
 }
 
-Form* Intern::createFormShr(std::string const & target)
+Form* createFormShr(std::string const & target)
 {
 	return new ShrubberyCreationForm(target);
 }
 
-Form* Intern::createFormRob(std::string const & target)
+Form* createFormRob(std::string const & target)
 {
 	return new RobotomyRequestForm(target);
 }
 
-Form* Intern::createFormPre(std::string const & target)
+Form* createFormPre(std::string const & target)
 {
 	return new PresidentialPardonForm(target);
 }
 
 Form* Intern::makeForm(std::string const & nameForm, std::string const & target)
 {
-	ptrToFunc fun[3] = { &Intern::createFormShr,  &Intern::createFormRob, &Intern::createFormPre};
+	ptrToFunc fun[3] = { createFormShr,  createFormRob, createFormPre };
 	std::string arr[3] = { "Shrubbery Creation", "Robotomy Request", "Presidential Pardon" };
 	for (int i = 0; i < 3; i++)
 	{
 		if (arr[i] == nameForm)
 		{
 			std::cout << "Intern creates " << nameForm <<std::endl;
-			return (this->*fun[i])(target);
+			return (fun[i])(target);
 		}
 	}
 	throw Intern::InternException();
