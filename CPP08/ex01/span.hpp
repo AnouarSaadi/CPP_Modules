@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 17:54:27 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/16 18:50:06 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/17 19:04:43 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 # define SPAN_HPP
 
 # include <iostream>
+# include <vector>
+# include <algorithm>
 
 class Span
 {
 private:
-	int *_arrInts;
-	int _n;
-	int _idx;
+	std::vector<int> _ints;
+	unsigned int 	_n;
 	Span();
 
 public:
@@ -30,12 +31,12 @@ public:
 	Span& operator=(Span const &);
 	
 	void addNumber(int);
+	void addNumber(std::vector<int>::iterator first, std::vector<int>::iterator last);
 	class NoSpaceToStore : public std::exception
 	{
 	public:
 		const char * what() const throw();
 	};
-
 
 	int shortestSpan();
 	int longestSpan();
@@ -44,7 +45,6 @@ public:
 	public:
 		const char * what() const throw();
 	};
-
 };
 
 #endif
