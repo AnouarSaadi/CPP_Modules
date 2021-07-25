@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 09:58:18 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/29 10:02:51 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:16:52 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,4 @@ RadScorpion & RadScorpion::operator=(RadScorpion const & orig)
 	}
 	return *this;
 }
+

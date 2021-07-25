@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   mutantstack.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/28 15:46:17 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/25 18:17:05 by asaadi           ###   ########.fr       */
+/*   Created: 2021/07/18 09:22:47 by asaadi            #+#    #+#             */
+/*   Updated: 2021/07/25 18:08:56 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-# define SUPERMUTANT_HPP
+#include "mutantstack.hpp"
 
-# include "Enemy.hpp"
-
-class SuperMutant : public Enemy
+template <typename T>
+MutantStack<T>  & MutantStack<T>::operator=(MutantStack<T> const &src)
 {
-public:
-	SuperMutant();
-	SuperMutant(SuperMutant const & orig);
-	virtual ~SuperMutant();
-	SuperMutant & operator=(SuperMutant const & orig);
+	if (this != &src)
+		this->std::stack<T>::operator=(src);
+	return *this;
+}
 
-	void takeDamage(int amount);
-};
-
-#endif

@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 11:58:33 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/07 13:50:56 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:12:37 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,3 +118,4 @@ std::ostream & operator<<(std::ostream & os, Form & av)
 		<< std::endl;
 	return os;
 }
+

@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 16:13:19 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/16 17:52:55 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:09:19 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 int main()
 {
 	std::cout << "Test N.01: array of ints." << std::endl;
-	std::array<int, 10> ints ={101,42,13,4,37,6,1337,80,9};
-	std::cout << "Array size: " << ints.size() << std::endl;
 	try 
 	{
+		std::array<int, 10> ints ={101,42,13,4,37,6,1337,80,9};
+		std::cout << "Array size: " << ints.size() << std::endl;
 		std::cout << "Test with a existent element: "  << std::endl;
 		easyfind(ints, 1337);
 		std::cout << "Test with a nonexistent element: "  << std::endl;
@@ -32,12 +32,12 @@ int main()
 	}
 
 	std::cout << "\nTest N.01: list of ints." << std::endl;
-	std::list<int> l;
-	l.push_back(13);
-	l.push_back(37);
-	l.push_back(42);
 	try 
 	{
+		std::list<int> l;
+		l.push_back(13);
+		l.push_back(37);
+		l.push_back(42);
 		std::cout << "Test with a existent element: "  << std::endl;
 		easyfind(l, 37);
 		std::cout << "Test with a nonexistent element: "  << std::endl;

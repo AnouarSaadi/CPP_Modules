@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/03 13:10:55 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/04 15:46:47 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:14:44 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,5 @@ public:
 	void learnMateria(AMateria* m);
 	AMateria* createMateria(std::string const & type);
 };
-
-
 
 #endif

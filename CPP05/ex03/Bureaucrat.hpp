@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 17:27:32 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/07 13:24:27 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:11:58 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,5 @@ public:
 std::ostream& operator<<(std::ostream & os, Bureaucrat & av);
 
 #endif
+ 
  

@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 16:25:13 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/09 11:24:34 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:23:11 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,5 @@ public:
 	std::string identify();
 	const Brain& getBrain();
 };
-
-
 
 #endif

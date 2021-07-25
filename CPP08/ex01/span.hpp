@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 17:54:27 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/17 19:04:43 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:09:05 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 class Span
 {
 private:
-	std::vector<int> _ints;
-	unsigned int 	_n;
+	std::vector<int>	_ints;
+	unsigned int		_n;
 	Span();
 
 public:

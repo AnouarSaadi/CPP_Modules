@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 15:08:39 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/09 15:33:46 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:22:45 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,4 @@ void HumanB::attack()
 {
 	std::cout << _name << " attacks with his " << _weapon->getType() << std::endl;
 }
+

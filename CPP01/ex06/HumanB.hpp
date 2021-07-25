@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 15:07:53 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/09 15:33:48 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:22:52 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,5 @@ public:
 	void setWeapon(Weapon& _argWeapon);
 	void attack();
 };
-
-
-
 
 #endif

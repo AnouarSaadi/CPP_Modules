@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 18:01:50 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/17 19:32:48 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:09:10 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,7 @@ Span & Span::operator=(Span const &src)
 		this->_n = src._n;
 		this->_ints.clear();
 		this->_ints.reserve(src._n);
-		for(unsigned int i = 0; i < src._ints.size(); i++)
-			this->_ints[i] = src._ints[i];
+		this->_ints = src._ints;
 	}
 	return *this;
 }
@@ -60,7 +59,7 @@ void	Span::addNumber(std::vector<int>::iterator first, std::vector<int>::iterato
 
 const char * Span::NoSpaceToStore::what() const throw()
 {
-	return "No space to store more numbers.";
+	return "No more space to store more numbers.";
 }
 
 int Span::shortestSpan()
@@ -88,3 +87,4 @@ const char * Span::NoSpanToFind::what() const throw()
 {
 	return "No span to find.";
 }
+

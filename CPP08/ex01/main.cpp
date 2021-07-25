@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 18:23:14 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/17 19:33:37 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:09:14 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main()
 {
+	std::cout << "Test N01: Normal test and exception of full span " << std::endl;
 	try
 	{
 		Span sp = Span(5);
@@ -30,6 +31,8 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
+
+	std::cout << "\nTest N02: The exception of find a span." << std::endl;
 	try
 	{
 		Span sp = Span(5);
@@ -41,6 +44,8 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
+
+	std::cout << "\nTest N03: Add a range of numbers without calling add number multiple times." << std::endl;
 	try
 	{
 		std::vector<int> vecInts;
@@ -50,6 +55,10 @@ int main()
 		sp.addNumber(vecInts.begin(), vecInts.end());
 		std::cout << sp.shortestSpan() << std::endl;
 		std::cout << sp.longestSpan() << std::endl;
+		std::cout << "Copy constructor" << std::endl;
+		Span spCp = Span(sp);
+		std::cout << spCp.shortestSpan() << std::endl;
+		std::cout << spCp.longestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{

@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 15:46:19 by asaadi            #+#    #+#             */
-/*   Updated: 2021/07/04 11:41:30 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:17:03 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,3 @@ void SuperMutant::takeDamage(int amount)
 {
 	Enemy::takeDamage(amount - 3);
 }
- 

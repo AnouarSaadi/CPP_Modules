@@ -6,7 +6,7 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 14:54:07 by asaadi            #+#    #+#             */
-/*   Updated: 2021/06/04 18:12:00 by asaadi           ###   ########.fr       */
+/*   Updated: 2021/07/25 18:24:34 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ public:
 	void	printContacts(int i);
 	Phonebook();
 };
-
 
 #endif
